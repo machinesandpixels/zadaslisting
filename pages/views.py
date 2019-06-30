@@ -28,3 +28,4 @@ def about(request):
     }
     
     return render(request, 'pages_templates/about.html', context)
+    
