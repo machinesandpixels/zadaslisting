@@ -9,7 +9,9 @@ img {
 
 .navbar {
   opacity: 0.9;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  background-color: rgb(192, 89, 170);
+ }
 
 .social a {
   margin-right: 0.4rem; }
