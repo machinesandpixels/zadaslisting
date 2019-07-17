@@ -2,9 +2,9 @@
 *.log
 *.pot
 *.pyc
-*.vscode
 __pycache__/
 local_settings.py
+.vscode
 db.sqlite3
 /media
 /static
