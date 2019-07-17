@@ -2,25 +2,37 @@ from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib import auth
 from django.contrib.auth.models import User
-
-# Create your views here.
-def dashboard(request):
-    return render(request, 'accounts/dashboard.html')
+from contacts.models import Contact
 
 def login(request):
     if request.method == 'POST':
-        print("login_test")
-        messages.error(request, 'Testing Error Message')
-        return redirect('register')
+        username = request.POST['username']
+        password = request.POST['password']
+
+        user = auth.authenticate(username=username, password=password)
+
+        if user is not None:
+            auth.login(request, user)
+            messages.success(request, 'You are now logged in')
+            return redirect('dashboard')
+
+        else:
+            messages.error(request, 'Invalid Username or Password' )
+            return redirect('login')
+
 
     else:
         return render(request, 'accounts/login.html')
 
 def logout(request):
-    return redirect(request, 'index')
+    if request.method == 'POST':
+        auth.logout(request)
+        messages.success(request, 'You are now logged out')
+        return redirect('index')
 
 def register(request):
     if request.method == 'POST':
+
         # Form Data
         first_name = request.POST['first_name']
         last_name = request.POST['last_name']
@@ -34,11 +46,13 @@ def register(request):
             messages.error(request, 'Passwords do not match')
             return redirect('register')
 
+        # Check Username
         if User.objects.filter(username=username).exists():
             messages.error(request,'This username is taken')
             
             return redirect('register')
  
+        # Check Email
         if User.objects.filter(email=email).exists():
             messages.error(request, 'This email is being used')
 
@@ -56,10 +70,14 @@ def register(request):
             user.save()
             messages.success(request, 'You are now registered')
             return redirect('login')
-            # login after registered
-            # auth.login(request, user)
-            # messages.success(request, 'You are now logged in')
-            # return redirect('index')
            
     else:
         return render(request, 'accounts/register.html')
+
+def dashboard(request):
+    user_contacts = Contact.objects.order_by('-contact_date').filter(user_id=request.user.id)
+
+    context = {
+        'contacts': user_contacts
+    }
+    return render(request,'accounts/dashboard.html', context)

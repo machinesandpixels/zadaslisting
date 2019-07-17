@@ -5,20 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- Font Awesome -->
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="{% static 'css/all.css' %}">
   <!-- Bootstrap -->
   <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
   <!-- Lightbox -->
   <link rel="stylesheet" href="{% static 'css/lightbox.min.css' %}">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
   <!-- Custom -->
-  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/custom.css' %}">
   
-    <title>Zada's Listings</title>
+    <title> Zada's Listings {% block title %} {% endblock %}</title>
 </head>
 <body>
-   <!-- Top Bar -->
-   {% include 'partials/_topbar.html'%}
    
    <!-- Nav Bar -->
    {% include 'partials/_navbar.html'%}
