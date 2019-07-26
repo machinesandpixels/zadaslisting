@@ -2,9 +2,9 @@
 <!-- Navbar -->
  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
         <div class="container">
-          <a class="navbar-brand" href="{% url 'index' %}">
+          <!-- <a class="navbar-brand" href="{% url 'index' %}">
             <img src="{% static 'img/logo.png' %}" class="logo" alt="">
-          </a>
+          </a> -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -75,9 +75,13 @@
                   class="nav-item"
                 {% endif %}
                 >
-                  <a class="nav-link" href="{% url 'register' %}">
-                     Register
-                  </a>
+
+                <button type="button" class="btn btn-outline-primary btn-sm m-1">
+                    <a class="nav-link" href="{% url 'register' %}">
+                        Register
+                    </a>
+                </button>
+                  
                 </li>
                 <li 
                 {% if 'login' in request.path %}
@@ -86,9 +90,12 @@
                   class="nav-item"
                 {% endif %}
                 >
-                  <a class="nav-link" href="{% url 'login' %}">
-                    Login
-                  </a>
+                <button type="button" class="btn btn-outline-primary btn-sm m-1">
+                    <a class="nav-link" href="{% url 'login' %}">
+                        Login
+                    </a>
+                </button>
+                  
                 </li>
               {% endif %}
             </ul>

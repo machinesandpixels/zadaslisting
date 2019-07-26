@@ -28,8 +28,8 @@ def contact(request):
                     request, 
                     'You have already made an inquiry for this listing.'
                     )
-                # return redirect('/listings/', listing_id=listing_id)
-                return redirect('/listings/'+listing_id)
+                return redirect('/listings/', listing_id=listing_id)
+                
 
         contact = Contact(
 
@@ -45,16 +45,5 @@ def contact(request):
 
         contact.save()
 
-        # Send email
-        
-        # send_mail(
-        #     "Zada's Listing Inquery",
-        #     'There as been a inquery for ' + listing + '. Sign in for more info ',
-        #     'myemail@gmail.com',
-        #     [realtor_email, 'forwardemail@gmail.com'],
-        #     fail_silently=False
-        # )
-        # messages.success(request, 'Your message has been sent and a Realtor will contact you shortly')
-
-        # return redirect('/listings/', listing_id=listing_id)
-        return redirect('/listings/'+listing_id)
+        return redirect('/listings/', listing_id=listing_id)
+       

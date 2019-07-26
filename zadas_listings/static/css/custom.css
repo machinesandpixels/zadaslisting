@@ -5,11 +5,11 @@ body {
 #main-footer{
   background-color: purple;
 }
-.btn-secondary {
+/* .btn-secondary {
   color: #fff !important;
   background-color: rgb(192, 89, 170);
   border: purple;
-}
+} */
 
 img {
   width: 100%;
@@ -37,18 +37,18 @@ img {
 }
 
 .badge-secondary {
-  background-color: rgb(192, 89, 170);
+  /* background-color: rgb(192, 89, 170); */
   font-size: 1.2rem;
 }
 
 .btn-primary {
-  background-color: rgb(192, 89, 170);
+  /* background-color: rgb(192, 89, 170); */
   border: purple;
 }
 
-#te {
+/* #te {
   color: #800080;
-}
+} */
 
 
 #showcase {
