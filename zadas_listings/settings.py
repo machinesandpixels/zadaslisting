@@ -4,7 +4,7 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'testkey'
+SECRET_KEY = 'pxgnyzfgjj6&adu1t*m36q7^%#^3e*zcuhkw^986m$1-8u2s$4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -125,6 +125,7 @@ MESSAGE_TAGS = {
     messages.ERROR:'danger'
 }
 
+# Local Settings
 try:
     from .local_settings import *
 except ImportError:
