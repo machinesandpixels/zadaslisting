@@ -9,32 +9,31 @@
 
  <!-- Showcase -->
  <section id="showcase">
+      
         <div class="container text-center">
           <div class="home-search p-5">
-            <div class="overlay p-5">
-              <h1 class="display-4 mb-4">
+            <div class="mt-4 p-2">
+              <h1 class="display-4 text-uppercase text-secondary mt-1 mb-3">
                 Search with Zada
               </h1>
-              <p class="lead"> Simply search for your dream home</p>
+              <p class="text-capitalize text-secondary">search for your dream home</p>
               <div class="search">
                 <form action="{% url 'search' %}">
+
                   <!-- Form Row 1 -->
-                  <div class="form-row">
-                    <div class="col-md-4 mb-3">
-                      <label class="sr-only">Keywords</label>
-                      <input type="text" name="keywords" class="form-control" placeholder="Keyword (Pool, Garage, etc)">
-                    </div>
+                  <div class="form-row ml-5">
     
-                    <div class="col-md-4 mb-3">
+                    <div class="col-md-2 mb-3">
                       <label class="sr-only">City</label>
                       <input type="text" name="city" class="form-control" placeholder="City">
                     </div>
     
-                    <div class="col-md-4 mb-3">
+                    <div class="col-md-2 mb-3">
                       <label class="sr-only">State</label>
                       <select name="state" class="form-control">
-                        <option selected="true" disabled="disabled">
-                          State (All)
+                        <!-- <option selected="true" disabled="disabled"> -->
+                        <option selected>
+                          State
                         </option>
                           {% for k, v in state_choices.items %}
                             <option value="{{ k }}">
@@ -42,50 +41,40 @@
                             </option>
                           {% endfor %}
                       </select>
+
                     </div>
-                  </div>
-                  <!-- Form Row 2 -->
-                  <div class="form-row">
-                    <div class="col-md-6 mb-3">
-                      <label class="sr-only">Bedrooms</label>
-                      <select name="bedrooms" class="form-control">
-                        <option selected="true" disabled="disabled">
-                          Bedrooms (All)
-                        </option>
-                        {% for k, v in bedroom_choices.items %}
-                          <option value="{{ k }}">
-                          {{ v }}
+                      <div class="col-md-3 mb-3">
+                        <select name="price" class="form-control" id="type">
+                          <option selected="true" disabled="disabled">
+                            Max Price
                           </option>
-                        {% endfor %}
-                      </select>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                      <select name="price" class="form-control" id="type">
-                        <option selected="true" disabled="disabled">
-                          Max Price (Any)
-                        </option>
-                        {% for k, v in price_choices.items %}
-                        <option value="{{ k }}">
-                          {{ v }}
-                        </option>
-                        {% endfor %}
-                      </select>
-                    </div>
+                          {% for k, v in price_choices.items %}
+                          <option value="{{ k }}">
+                            {{ v }}
+                          </option>
+                          {% endfor %}
+                        </select>
+                      </div>
+
+                      <button class="btn btn-secondary col-md-2 mb-3" type="submit">
+                          <i class="fas fa-search"> </i> Search
+                      </button>
+
                   </div>
-                  <button id="submitColor" class="btn btn-block mt-4" type="submit">
-                    Submit
-                  </button>
                 </form>
               </div>
             </div>
           </div>
         </div>
-      </section>
+       
+  </section>
 
       <!-- Listings -->
-      <section id="listings" class="py-5">
+      <section class="py-5 centerimg">
         <div class="container">
-          <h3 class="text-center mb-3">Latest Listings</h3>
+          <h3 class="text-center mb-5">Latest Listings</h3>
+          <hr id="listingLine" class="mb-5">
+
           <div class="row">
             {% if listings %}
               {% for listing in listings %}
@@ -93,7 +82,7 @@
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card listing-preview">
                       <img class="card-img-top" src="{{ listing.photo_main.url }}" alt="">
-                      <div class="card-img-overlay">
+                      <div class="card-img-overlay shadow">
                         <h2>
                           <span class="badge badge-secondary text-white">
                             ${{ listing.price | intcomma }}
@@ -102,51 +91,18 @@
                       </div>
                       <div class="card-body">
                         <div class="listing-heading text-center">
-                          <h4  class="text-primary"> {{ listing.title }}</h4>
+                          <h4  class="text-secondary"> {{ listing.title }}</h4>
                           <p>
-                            <i id="te" class="fas fa-map-marker"></i> 
+                            <i class="fas fa-map-marker text-secondary"></i> 
                             {{ listing.city }}
                             {{ listing.state }}
                             {{ lsiting.zipcode }}
                           </p>
                         </div>
                         <hr>
-                        <div id="te" class="row py-2">
-                          <div class="col-6">
-                            <i class="fas fa-th-large"></i> 
-                            {{ listing.sqft }}
-                          </div>
-                          <div class="col-6">
-                            <i class="fas fa-car"></i> 
-                            Garage: {{ listing.garage }} 
-                          </div>
-                        </div>
-                        <div id="te" class="row py-2">
-                          <div class="col-6">
-                            <i class="fas fa-bed"></i> 
-                            Bedrooms: {{ listing.bedrooms }}
-                          </div>
-                          <div class="col-6">
-                            <i class="fas fa-bath"></i> 
-                            Bathrooms: {{ listing.bathrooms }}
-                          </div>
-                        </div>
-                        <hr>
-                        <div id="te" class="row py-2">
-                          <div class="col-6">
-                            <i class="fas fa-user"></i> 
-                            {{ listing.realtor }} 
-                          </div>
-                        </div>
-                        <div id="te" class="row pb-2">
-                          <div class="col-6">
-                            <i class="fas fa-clock"></i> 
-                            {{ listing.list_date | timesince }}
-                          </div>
-                        </div>
-                        <hr>
+
                         <a href="{% url 'listing' listing.id %}"
-                        class="btn btn-primary btn-block">
+                        class="btn btn-secondary btn-block">
                           More Info
                         </a>
                       </div>
@@ -156,38 +112,10 @@
 
                 {% else %}
                   <div class="col-md-12">
-                    <p>No Listins Available</p>
+                    <p>No Listings Available</p>
                   </div>
                 {% endif %}
           
-          </div>
-        </div>
-      </section>
-    
-      <section id="services" class="py-5 bg-secondary text-white">
-        <div class="container">
-          <div class="row text-center">
-            <div class="col-md-4">
-              <i class="fas fa-comment fa-4x mr-4"></i>
-              <hr>
-              <h3>Consulting Services</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
-                hic dignissimos ratione ea quae.</p>
-            </div>
-            <div class="col-md-4">
-              <i class="fas fa-home fa-4x mr-4"></i>
-              <hr>
-              <h3>Propery Management</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
-                hic dignissimos ratione ea quae.</p>
-            </div>
-            <div class="col-md-4">
-              <i class="fas fa-suitcase fa-4x mr-4"></i>
-              <hr>
-              <h3>Renting & Selling</h3>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, debitis nam! Repudiandae, provident iste consequatur
-                hic dignissimos ratione ea quae.</p>
-            </div>
           </div>
         </div>
       </section>

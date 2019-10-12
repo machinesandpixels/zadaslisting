@@ -1,132 +1,98 @@
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Rubik', sans-serif;
 }
-
-#main-footer{
-  background-color: purple;
-}
-/* .btn-secondary {
-  color: #fff !important;
-  background-color: rgb(192, 89, 170);
-  border: purple;
-} */
 
 img {
   width: 100%;
 }
 
-.logo {
-  width: 80px;
+/* Keeps footer at the bottom */
+#login{
+ 
+  min-height: 750px;
 }
 
+/* Keeps footer at the bottom */
+.noListings{
+  min-height: 170px;
+}
+
+
+/* .logo {
+  width: 80px;
+} */
+
 .navbar {
-  font-family: 'Poppins', sans-serif;
-  /* opacity: 0.9; */
+  
+  background-color: rgba(61, 41, 59); 
+  border-bottom: solid 2px purple;
   text-transform: uppercase;
-  background-color: #800080;
-  border-bottom: solid 1px rgba(61, 41, 59, 0.61);
+  
+  /* position: relative;
+  top: 60px;
+   */
+  
+}
+
+/* Turns images into Circles for About page */
+#circleimg {
+  display: inline-block;
+  position: relative;
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+#circleimg img {
+  width: auto;
+  height: 100%;
+  margin-left: -50px;
 }
 
 .social a {
   margin-right: 0.4rem;
 }
 
-#submitColor {
-  background-color: rgb(192, 89, 170);
-  color: #fff;
-}
+#showcase { 
+  
+  background: url(../img/showcase.jpg) no-repeat top center fixed/cover; 
 
-.badge-secondary {
-  /* background-color: rgb(192, 89, 170); */
-  font-size: 1.2rem;
-}
-
-.btn-primary {
-  /* background-color: rgb(192, 89, 170); */
-  border: purple;
-}
-
-/* #te {
-  color: #800080;
-} */
-
-
-#showcase {
-  background: url(../img/showcase.jpg) no-repeat top center fixed/cover;
-  position: relative;
-  min-height: 650px;
-  color: #fff;
-  padding-top: 6rem;
+  min-height: 800px;
+  z-index: 0;
+ 
+  
+  /* padding-top: 6rem; */
 }
 
 #showcase .home-search {
-  min-height: 400px;
-  position: relative;
-  border-radius: 5px;
+  
+  font-family: 'Poppins', sans-serif;
+
 }
 
-#showcase .overlay {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-height: 400px;
-  width: 100%;
-  background: rgba(61, 41, 59, 0.61);
-  border: solid 2px rgb(192, 89, 170);
+#listingLine{
+  border: solid 2px purple;
+  max-width: 10%;
 }
 
-#services {
-  background: url(../img/building.jpg) no-repeat top center fixed/cover;
-  min-height: 300px;
-  position: relative;
-  overflow: hidden;
-}
 
-#services::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-height: 100%;
-  width: 100%;
-  background-color: rgba(61, 41, 59, 0.61);
-}
-
-#showcase-inner {
-  background: url(../img/building.jpg) no-repeat top center fixed/cover;
-  position: relative;
-  overflow: hidden;
+#showcase-inner{
+  background: url(../img/showcase.jpg) no-repeat top center fixed/cover;
   min-height: 200px;
-}
-
-#showcase-inner::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-height: 100%;
-  width: 100%;
-  /* background: rgba(32, 134, 107, 0.8);  */
-  background: rgba(61, 41, 59, 0.61);
-
-}
-
-#showcase-inner.showcase-search {
-  min-height: 270px;
-}
-
-#work {
-  padding: 6rem 0;
 }
 
 .listing-preview a {
   position: relative;
 }
 
+.search{
+  margin-left: 15%;
+}
+
 @media (max-width: 991px) {
   #showcase {
-    padding-top: 4rem;
+    /* padding-top: 4rem; */
   }
 
   #showcase h1 {
@@ -144,7 +110,7 @@ img {
   }
 
   #showcase h1 {
-    font-size: 40px;
+    font-size: 20px;
   }
 
   #showcase p {
@@ -161,11 +127,25 @@ img {
 }
 
 @media (max-width: 576px) {
+  #showcase{
+    
+    position: relative;
+    bottom: 100px;
+
+  }
   #showcase h1 {
-    font-size: 30px;
+    font-size: 35px;
+    /* font-size: 35px; */
+   
   }
 
   #showcase-inner h1 {
     font-size: 40px;
   }
-}
+
+  .search{
+    margin-left: 0%;
+    margin-right: 15%;
+  }
+ 
+} 
