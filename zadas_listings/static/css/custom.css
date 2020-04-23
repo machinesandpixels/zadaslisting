@@ -17,21 +17,10 @@ img {
   min-height: 170px;
 }
 
-
-/* .logo {
-  width: 80px;
-} */
-
 .navbar {
-  
   background-color: rgba(61, 41, 59); 
   border-bottom: solid 2px purple;
   text-transform: uppercase;
-  
-  /* position: relative;
-  top: 60px;
-   */
-  
 }
 
 /* Turns images into Circles for About page */
@@ -55,20 +44,13 @@ img {
 }
 
 #showcase { 
-  
   background: url(../img/showcase.jpg) no-repeat top center fixed/cover; 
-
   min-height: 800px;
   z-index: 0;
- 
-  
-  /* padding-top: 6rem; */
 }
 
 #showcase .home-search {
-  
   font-family: 'Poppins', sans-serif;
-
 }
 
 #listingLine{
@@ -91,10 +73,7 @@ img {
 }
 
 @media (max-width: 991px) {
-  #showcase {
-    /* padding-top: 4rem; */
-  }
-
+  
   #showcase h1 {
     font-size: 40px;
   }
@@ -128,15 +107,11 @@ img {
 
 @media (max-width: 576px) {
   #showcase{
-    
     position: relative;
     bottom: 100px;
-
   }
   #showcase h1 {
     font-size: 35px;
-    /* font-size: 35px; */
-   
   }
 
   #showcase-inner h1 {

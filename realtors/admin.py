@@ -7,5 +7,4 @@ class RealtorAdmin(admin.ModelAdmin):
     search_fields = ('name',)
     list_per_page = 10
 
-
 admin.site.register(Realtor, RealtorAdmin)
