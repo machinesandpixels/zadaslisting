@@ -1,22 +1,7 @@
 body {
-  font-family: 'Rubik', sans-serif;
-  background-image: url('../img/showcase.jpg');
-  background-repeat: no-repeat;
-  /* background-attachment: fixed; */
-  background-position: center;
-  /* background-repeat: no-repeat; */
-  /* background-attachment: fixed; */
-  /* background-position: center; */
-  
-    /* min-height: 800px; */
-    /* z-index: 0; */
-    /* no-repeat top center fixed cover */
-
+  font-family: 'Jost', sans-serif;
+  height: 100%;
 }
-
-/* img {
-  width: 100%;
-} */
 
 /* Keeps footer at the bottom */
 /* #login{
@@ -30,9 +15,10 @@ body {
 } */
 
 .navbar {
-  background-color: rgba(61, 41, 59); 
-  border-bottom: solid 2px purple;
+  background-color: rgb(3, 47, 47);
+  filter: drop-shadow(0 0 0.75rem teal);
   text-transform: uppercase;
+  opacity: .9;
 }
 
 /* Turns images into Circles for About page */
@@ -55,15 +41,23 @@ body {
   margin-right: 0.4rem;
 }
 
-/* .showcase { 
-  background: url('../img/showcase.jpg') top no-repeat fixed;
- 
-  z-index: 0;
-  
-} */
 
-/* #showcase .home-search {
-  font-family: 'Poppins', sans-serif;
+#showcase { 
+  background: url(../img/showcase.jpg); 
+  /* background: url(../img/showcase.jpg) bottom center no-repeat;  */
+  z-index: 0;
+  /* Full height */
+  height: 100vh;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+#test {
+  color: teal;
 }
 
 #listingLine{
@@ -136,4 +130,4 @@ body {
     margin-right: 15%;
   }
  
-}  */
+}  
