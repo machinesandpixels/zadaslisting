@@ -3,22 +3,16 @@ body {
   height: 100%;
 }
 
-/* Keeps footer at the bottom */
-/* #login{
- 
-  min-height: 750px;
-} */
-
-/* Keeps footer at the bottom */
-/* .noListings{
-  min-height: 170px;
-} */
+img {
+  width: 100%;
+}
 
 .navbar {
   background-color: rgb(3, 47, 47);
   filter: drop-shadow(0 0 0.75rem teal);
   text-transform: uppercase;
   opacity: .9;
+  font-size: 1.2rem;
 }
 
 /* Turns images into Circles for About page */
@@ -42,46 +36,53 @@ body {
 }
 
 
-#showcase { 
+.showcase { 
   background: url(../img/showcase.jpg); 
-  /* background: url(../img/showcase.jpg) bottom center no-repeat;  */
   z-index: 0;
   /* Full height */
   height: 100vh;
-
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  
 }
 
-#test {
-  color: teal;
-}
-
-#listingLine{
-  border: solid 2px purple;
-  max-width: 10%;
-}
-
-
-#showcase-inner{
-  background: url(../img/showcase.jpg) no-repeat top center fixed/cover;
+.showcase-inner{
+  background: url('../img/showcase.jpg') no-repeat top center fixed/cover;
   min-height: 200px;
+}
+
+.listing-line{
+  border: solid 2px teal;
+  max-width: 10%;
 }
 
 .listing-preview a {
   position: relative;
 }
 
+/* city, price, state */
 .search{
   margin-left: 15%;
 }
 
+.search-box{
+  display: flex;
+  justify-content: center;
+  /* margin-top: 7rem; */
+  width: 100%;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25vh;
+}
+
 @media (max-width: 991px) {
   
-  #showcase h1 {
+  .showcase h1 {
     font-size: 40px;
   }
 
@@ -91,15 +92,15 @@ body {
 }
 
 @media (max-width: 768px) {
-  #showcase {
+  .showcase {
     padding-top: 3rem;
   }
 
-  #showcase h1 {
+  .showcase h1 {
     font-size: 20px;
   }
 
-  #showcase p {
+  .showcase p {
     display: none;
   }
 
@@ -113,15 +114,15 @@ body {
 }
 
 @media (max-width: 576px) {
-  #showcase{
+  .showcase{
     position: relative;
     bottom: 100px;
   }
-  #showcase h1 {
+  .showcase h1 {
     font-size: 35px;
   }
 
-  #showcase-inner h1 {
+  .showcase-inner h1 {
     font-size: 40px;
   }
 
@@ -129,5 +130,4 @@ body {
     margin-left: 0%;
     margin-right: 15%;
   }
- 
 }  
