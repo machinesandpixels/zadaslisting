@@ -13,25 +13,23 @@
           <div class="home-search p-5">
             <div class="search-box">
             <div class="mt-4 p-2">
-              <h1 class="display-4 text-uppercase mt-1 mb-3 text-primary"
+              <h1 class="display-4 text-uppercase mt-1 mb-1 text-primary"
               >
                 Search with Zada
               </h1>
-              <p class="text-capitalize text-primary">
+              <p class="text-capitalize text-primary dream-home--text">
                 search for your dream home
               </p>
-              <div class="search">
-                <form action="{% url 'search' %}">
-
+              <div >
+                <form class="search" action="{% url 'search' %}">
                   <!-- Form Row 1 -->
-                  <div class="form-row ml-5">
-    
+                  <div class="form-row form--wrapper">
                     <div class="col-md-2 mb-3">
                       <label class="sr-only">City</label>
                       <input type="text" name="city" class="form-control" placeholder="City">
                     </div>
     
-                    <div class="col-md-2 mb-3">
+                    <div class="col-md-3 mb-3">
                       <label class="sr-only">State</label>
                       <select name="state" class="form-control">
                         <!-- <option selected="true" disabled="disabled"> -->
@@ -63,7 +61,7 @@
                           <i class="fas fa-search"> </i> Search
                       </button>
 
-                  </div>
+              </div>
                 </form>
               </div>
             </div>

@@ -3,6 +3,10 @@ body {
   height: 100%;
 }
 
+h1{
+  font-family: 'Alata', sans-serif;
+}
+
 img {
   width: 100%;
 }
@@ -15,6 +19,37 @@ img {
   font-size: 1.2rem;
 }
 
+.card{
+  filter: drop-shadow(0 0 0.50rem grey);
+}
+
+.home-search{
+  height: 100vh;
+  width: 100%;
+}
+
+.search-box{
+  width: 100%;
+}
+
+.form--wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.search{
+  margin-top: 4.9rem;
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dream-home--text{
+  opacity: .7;
+}
 /* Turns images into Circles for About page */
 #circleimg {
   display: inline-block;
@@ -62,15 +97,19 @@ img {
 }
 
 /* city, price, state */
-.search{
+/* .search{
   margin-left: 15%;
-}
+} */
 
 .search-box{
   display: flex;
   justify-content: center;
   /* margin-top: 7rem; */
   width: 100%;
+}
+
+#login{
+  height: 100vh;
 }
 
 footer{
