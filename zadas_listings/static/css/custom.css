@@ -12,11 +12,13 @@ img {
 }
 
 .navbar {
-  background-color: rgb(3, 47, 47);
+  /* background-color: rgb(3, 47, 47);
   filter: drop-shadow(0 0 0.75rem teal);
+  opacity: .9; */
+  font-size: 1.1rem;
+  position: relative;
   text-transform: uppercase;
-  opacity: .9;
-  font-size: 1.2rem;
+  margin-top: 1rem;
 }
 
 .card{
@@ -38,7 +40,7 @@ img {
 }
 
 .search{
-  margin-top: 4.9rem;
+  margin-top: 5.9rem;
   height: 20vh;
   width: 100%;
   display: flex;
@@ -73,18 +75,27 @@ img {
 
 .showcase { 
   background: url(../img/showcase.jpg); 
-  z-index: 0;
+  /* z-index: 0; */
   /* Full height */
-  height: 100vh;
+  /* height: 100vh; */
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin-bottom: 5rem;
 }
 
-.showcase-inner{
+/* .showcase-inner{
   background: url('../img/showcase.jpg') no-repeat top center fixed/cover;
   min-height: 200px;
+} */
+
+.listing--wrapper{
+ margin-top: 46rem;
+ margin-bottom: 5rem;
 }
 
 .listing-line{
