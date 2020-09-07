@@ -15,10 +15,15 @@ img {
   /* background-color: rgb(3, 47, 47);
   filter: drop-shadow(0 0 0.75rem teal);
   opacity: .9; */
+  font-family: 'Alata', sans-serif;
   font-size: 1.1rem;
   position: relative;
   text-transform: uppercase;
   margin-top: 1rem;
+}
+
+.nav-link {
+  font-family: 'Alata', sans-serif;
 }
 
 .card{
