@@ -1,39 +1,62 @@
 body {
-  font-family: 'Rubik', sans-serif;
+  font-family: 'Jost', sans-serif;
+  height: 100%;
+}
+
+h1{
+  font-family: 'Alata', sans-serif;
 }
 
 img {
   width: 100%;
 }
 
-/* Keeps footer at the bottom */
-#login{
- 
-  min-height: 750px;
-}
-
-/* Keeps footer at the bottom */
-.noListings{
-  min-height: 170px;
-}
-
-
-/* .logo {
-  width: 80px;
-} */
-
 .navbar {
-  
-  background-color: rgba(61, 41, 59); 
-  border-bottom: solid 2px purple;
+  /* background-color: rgb(3, 47, 47);
+  filter: drop-shadow(0 0 0.75rem teal);
+  opacity: .9; */
+  font-family: 'Alata', sans-serif;
+  font-size: 1.1rem;
+  position: relative;
   text-transform: uppercase;
-  
-  /* position: relative;
-  top: 60px;
-   */
-  
+  margin-top: 1rem;
 }
 
+.nav-link {
+  font-family: 'Alata', sans-serif;
+}
+
+.card{
+  filter: drop-shadow(0 0 0.50rem grey);
+}
+
+.home-search{
+  height: 100vh;
+  width: 100%;
+}
+
+.search-box{
+  width: 100%;
+}
+
+.form--wrapper{
+  display: flex;
+  justify-content: center;
+}
+
+.search{
+  margin-top: 5.9rem;
+  height: 20vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dream-home--text{
+  opacity: .7;
+}
 /* Turns images into Circles for About page */
 #circleimg {
   display: inline-block;
@@ -54,48 +77,67 @@ img {
   margin-right: 0.4rem;
 }
 
-#showcase { 
-  
-  background: url(../img/showcase.jpg) no-repeat top center fixed/cover; 
 
-  min-height: 800px;
-  z-index: 0;
- 
-  
-  /* padding-top: 6rem; */
+.showcase { 
+  background: url(../img/showcase.jpg); 
+  /* z-index: 0; */
+  /* Full height */
+  /* height: 100vh; */
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin-bottom: 5rem;
 }
 
-#showcase .home-search {
-  
-  font-family: 'Poppins', sans-serif;
-
-}
-
-#listingLine{
-  border: solid 2px purple;
-  max-width: 10%;
-}
-
-
-#showcase-inner{
-  background: url(../img/showcase.jpg) no-repeat top center fixed/cover;
+/* .showcase-inner{
+  background: url('../img/showcase.jpg') no-repeat top center fixed/cover;
   min-height: 200px;
+} */
+
+.listing--wrapper{
+ margin-top: 46rem;
+ margin-bottom: 5rem;
+}
+
+.listing-line{
+  border: solid 2px teal;
+  max-width: 10%;
 }
 
 .listing-preview a {
   position: relative;
 }
 
-.search{
+/* city, price, state */
+/* .search{
   margin-left: 15%;
+} */
+
+.search-box{
+  display: flex;
+  justify-content: center;
+  /* margin-top: 7rem; */
+  width: 100%;
+}
+
+#login{
+  height: 100vh;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25vh;
 }
 
 @media (max-width: 991px) {
-  #showcase {
-    /* padding-top: 4rem; */
-  }
-
-  #showcase h1 {
+  
+  .showcase h1 {
     font-size: 40px;
   }
 
@@ -105,15 +147,15 @@ img {
 }
 
 @media (max-width: 768px) {
-  #showcase {
+  .showcase {
     padding-top: 3rem;
   }
 
-  #showcase h1 {
+  .showcase h1 {
     font-size: 20px;
   }
 
-  #showcase p {
+  .showcase p {
     display: none;
   }
 
@@ -127,19 +169,15 @@ img {
 }
 
 @media (max-width: 576px) {
-  #showcase{
-    
+  .showcase{
     position: relative;
     bottom: 100px;
-
   }
-  #showcase h1 {
+  .showcase h1 {
     font-size: 35px;
-    /* font-size: 35px; */
-   
   }
 
-  #showcase-inner h1 {
+  .showcase-inner h1 {
     font-size: 40px;
   }
 
@@ -147,5 +185,4 @@ img {
     margin-left: 0%;
     margin-right: 15%;
   }
- 
-} 
+}  

@@ -1,3 +1,11 @@
 # Zada's Listings
-## Django based Real Estate Web App 
-![homepage](zadasListings.PNG)
+ > Your Dream Home Awaits
+
+**A Python / Django Rental marketplace Web application**
+
+Technologies: Django, Postgres
+
+---
+
+## Home
+![homepage](zadaslistings.PNG)

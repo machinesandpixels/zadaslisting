@@ -8,27 +8,28 @@
 {% include 'partials/_alert.html'%}
 
  <!-- Showcase -->
- <section id="showcase">
-      
+ <section class="showcase">
         <div class="container text-center">
           <div class="home-search p-5">
+            <div class="search-box">
             <div class="mt-4 p-2">
-              <h1 class="display-4 text-uppercase text-secondary mt-1 mb-3">
+              <h1 class="display-5 text-uppercase mt-4 text-primary"
+              >
                 Search with Zada
               </h1>
-              <p class="text-capitalize text-secondary">search for your dream home</p>
-              <div class="search">
-                <form action="{% url 'search' %}">
-
+              <p class="text-capitalize text-primary dream-home--text">
+                your dream home awaits
+              </p>
+              <div >
+                <form class="search" action="{% url 'search' %}">
                   <!-- Form Row 1 -->
-                  <div class="form-row ml-5">
-    
+                  <div class="form-row form--wrapper">
                     <div class="col-md-2 mb-3">
                       <label class="sr-only">City</label>
                       <input type="text" name="city" class="form-control" placeholder="City">
                     </div>
     
-                    <div class="col-md-2 mb-3">
+                    <div class="col-md-3 mb-3">
                       <label class="sr-only">State</label>
                       <select name="state" class="form-control">
                         <!-- <option selected="true" disabled="disabled"> -->
@@ -56,24 +57,25 @@
                         </select>
                       </div>
 
-                      <button class="btn btn-secondary col-md-2 mb-3" type="submit">
+                      <button class="btn btn-primary col-md-2 mb-3" type="submit">
                           <i class="fas fa-search"> </i> Search
                       </button>
 
-                  </div>
+              </div>
                 </form>
               </div>
             </div>
+          </div>
           </div>
         </div>
        
   </section>
 
       <!-- Listings -->
-      <section class="py-5 centerimg">
+      <section class="py-5 centerimg listing--wrapper">
         <div class="container">
           <h3 class="text-center mb-5">Latest Listings</h3>
-          <hr id="listingLine" class="mb-5">
+          <hr class="mb-5 listing-line">
 
           <div class="row">
             {% if listings %}
@@ -93,7 +95,7 @@
                         <div class="listing-heading text-center">
                           <h4  class="text-secondary"> {{ listing.title }}</h4>
                           <p>
-                            <i class="fas fa-map-marker text-secondary"></i> 
+                            <i class="fas fa-map-marker text-primary"></i> 
                             {{ listing.city }}
                             {{ listing.state }}
                             {{ lsiting.zipcode }}
