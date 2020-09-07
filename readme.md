@@ -8,4 +8,4 @@ Technologies: Django, Postgres
 ---
 
 ## Home
-![homepage](zadaslistings.jpg)
+![homepage](zadaslistings.PNG)
